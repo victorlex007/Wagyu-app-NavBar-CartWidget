@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import { Cartwidget } from './components/Cartwidget/Cartwidget';
+import Navbar from './components/Navbar';
+import {Contador} from './components/Contador/Contador.jsx';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import { ItemList } from './ItemList/ItemList';
+
+
 
 function App() {
+  const onAdd = (contador) => {}
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <Contador stock={5} inicial={1} onAdd={onAdd}/>
+      <ItemListContainer/>
     </div>
   );
 }
